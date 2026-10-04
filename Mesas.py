@@ -1,3 +1,12 @@
+import subprocess
+import sys
+
+try:
+    import matplotlib
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
+    import matplotlib
+
 import streamlit as st
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
